@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url(../img/111.jpg) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.all {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: rgba(32, 32, 29, 0.4392156863);
+  padding: 37px;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+header .navigation {
+  display: flex;
+  justify-content: space-around;
+}
+header .navigation a {
+  color: white;
+  font-size: 36px;
+}
+
+.chat {
+  display: flex;
+  border: 1px solid white;
+  border-radius: 20px;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 196px;
+  width: 50%;
+  min-height: 697px;
+  padding: 19px 30px 66px 30px;
+}
+.chat .top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.chat .top .panel {
+  display: flex;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.chat .top .panel .text {
+  padding: 6px 241px;
+}
+.chat .top .panel .text p {
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+}
+.chat .top .cross {
+  cursor: pointer;
+  color: #a7a7a7;
+  top: 15px;
+  right: 15px;
+  font-size: 21px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.chat .top :hover {
+  color: red;
+}
+.chat .bot {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.chat .bot .line {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+.chat .bot .lol {
+  position: relative;
+}
+.chat .bot .lol input {
+  border-radius: 50px;
+  min-height: 50px;
+  z-index: 0;
+  width: 100%;
+  color: black;
+  padding: 0 40px 0 40px;
+  font-size: 18px;
+}
+.chat .bot .lol .skrepka {
+  top: 17px;
+  left: 16px;
+  z-index: 999;
+  position: absolute;
+}
+.chat .bot .lol .tg {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+footer {
+  background: #20201D;
+  padding: 40px 80px;
+  width: 100%;
+}
+footer .name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .name p {
+  font-size: 48px;
+  font-weight: 700;
+}
+footer .name .info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+footer .name .info .contact h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+footer .name .info .contact .contacts p {
+  font-size: 32px;
+  font-weight: 300;
+}/*# sourceMappingURL=dialog.css.map */

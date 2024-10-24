@@ -1,0 +1,271 @@
+$white: white;
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(../img/image\ 17.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+header {
+    padding: 37px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+        a {
+            color: $white;
+            font-size: 36px;
+        }
+    }
+}
+
+.block {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    gap: 50px;
+    .left {
+        width: 40%;
+        display: flex;
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h1 {
+                font-size: 64px;
+                font-weight: 700;
+            }
+            p {
+                font-size: 32px;
+            }
+        }
+    }
+    .right {
+        display: flex;
+        a {
+            border-radius: 20px;
+            padding: 36px 48px;
+            background: none;
+            border: 1px solid $white;
+            font-size: 32px;
+            font-weight: 700;
+            color: $white;
+        }
+    }
+}
+
+.pop_up_anim {
+    animation: up 1s ease-in-out;
+}
+
+.pop_down_anim {
+    display: none;
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes down {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.pop_up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transition: 0.2s ease-in-out;
+    .active {
+        display: block;
+    }
+    .pop_up_container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        .pop_up_body {
+            margin: auto;
+            width: 880px;
+            gap: 10px;
+            display: flex;
+            border: 1px solid #a7a7a7;
+            flex-direction: column;
+            border-radius: 20px;
+            padding: 80px 0px 40px 0px;
+            text-align: center;
+            position: relative;
+            p {
+                font-size: 36px;
+                font-weight: 600;
+                color: $white;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                width: 100%;
+                height: 100%;
+                padding: 20px 15px;
+                font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+                box-sizing: border-box;
+                color: #0e2954;
+                position: relative;
+                .field-container {
+                    border: 1px solid #a7a7a7;
+                    border-radius: 8px;
+                    width: 100%;
+                    max-width: 80%;
+                    height: 50px;
+                    position: relative;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    transition: 0.2s;
+                    .input {
+                        width: 100%;
+                        height: 100%;
+                        padding: 10px 10px 3px 10px;
+                        box-sizing: border-box;
+                        border: none;
+                        outline: none;
+                        background: transparent;
+                        position: relative;
+                        color: white;
+                        z-index: 11;
+                        font-size: 18px;
+                        &:focus~.placeholder,
+                        &:not(:placeholder-shown)~.placeholder {
+                            top: 5px;
+                            transform: none;
+                            font-size: 12px;
+                        }
+                    }
+                    .placeholder {
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translateY(-50%);
+                        color: #a7a7a7;
+                        transition: all 0.3s ease;
+                        font-size: 18px;
+                    }
+                }
+                 :hover {
+                    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.134);
+                }
+            }
+            a {
+                width: 100%;
+                padding-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                #bottone1 {
+                    width: 30%;
+                    height: 60px;
+                    border-radius: 50px;
+                    border: 1px solid #a7a7a7;
+                    background: none;
+                    text-align: center;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    transition: 0.2s;
+                    strong {
+                        color: $white;
+                        text-align: center;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        box-shadow: none;
+                    }
+                }
+                 :hover {
+                    box-shadow: 0px 3px 40px 1px #ffffff43;
+                }
+                 :active {
+                    transform: scale(.95);
+                }
+            }
+            .krestik {
+                .pop_up_close {
+                    position: absolute;
+                    color: #a7a7a7;
+                    top: 15px;
+                    right: 15px;
+                    font-size: 21px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+                 :hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: #20201D;
+    padding: 40px 80px;
+    .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .info {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            .contact {
+                h1 {
+                    font-size: 36px;
+                    font-weight: 700;
+                }
+                .contacts {
+                    p {
+                        font-size: 32px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
